@@ -123,19 +123,15 @@
       <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">true</IntrinsicFunctions>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">Speed</FavorSizeOrSpeed>
-      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">true</OmitFramePointers>
-      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">true</EnableFiberSafeOptimizations>
-      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">true</WholeProgramOptimization>
       <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">true</IntrinsicFunctions>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">Speed</FavorSizeOrSpeed>
-      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">true</OmitFramePointers>
-      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">true</EnableFiberSafeOptimizations>
-      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">true</WholeProgramOptimization>
       <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">None</DebugInformationFormat>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">None</DebugInformationFormat>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Win10 Release|x64'">false</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Win11 Release|x64'">false</WholeProgramOptimization>
     </ClCompile>
     <CustomBuildStep>
       <Command>copy /Y $(ProjectDir)viofs.DVL.XML $(ProjectDir)$(PackOne_DestinationPrefix)Install\$(TargetOS)\$(TargetArch)</Command>
