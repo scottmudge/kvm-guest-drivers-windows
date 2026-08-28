@@ -10,7 +10,7 @@ rem The script will stop if any of the makecab operations fail.
 rem ================================================================================
 
 rem A list of all .ddf files to be built
-set DDF_FILES=win10_arm64.ddf win10_x64.ddf win10_x86.ddf win11_arm64.ddf win11_x64.ddf
+set DDF_FILES=win11_x64.ddf
 
 echo.
 echo Starting cabinet file build process...

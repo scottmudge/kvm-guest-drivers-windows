@@ -115,13 +115,7 @@
     <PackageDir>$(OutDir)</PackageDir>
   </PropertyGroup>
   <ItemGroup>
-    <FilesToPackage Include="..\pci\$(IntDir)\viofs.pdb">
-      <PackageRelativeDirectory>.</PackageRelativeDirectory>
-    </FilesToPackage>
     <FilesToPackage Include="..\svc\$(IntDir)\virtiofs.exe">
-      <PackageRelativeDirectory>.</PackageRelativeDirectory>
-    </FilesToPackage>
-    <FilesToPackage Include="..\svc\$(IntDir)\virtiofs.pdb">
       <PackageRelativeDirectory>.</PackageRelativeDirectory>
     </FilesToPackage>
   </ItemGroup>

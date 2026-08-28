@@ -119,9 +119,6 @@
     <PackageDir>$(OutDir)</PackageDir>
   </PropertyGroup>
   <ItemGroup>
-    <FilesToPackage Include="..\pvpanic\$(IntDir)pvpanic.pdb">
-      <PackageRelativeDirectory>.</PackageRelativeDirectory>
-    </FilesToPackage>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\pvpanic\pvpanic.vcxproj">

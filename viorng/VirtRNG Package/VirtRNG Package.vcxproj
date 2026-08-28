@@ -123,13 +123,7 @@
     <PackageDir>$(OutDir)</PackageDir>
   </PropertyGroup>
   <ItemGroup>
-    <FilesToPackage Include="..\viorng\$(IntDir)viorng.pdb">
-      <PackageRelativeDirectory>.</PackageRelativeDirectory>
-    </FilesToPackage>
     <FilesToPackage Include="..\cng\um\$(IntDir)viorngum.dll">
-      <PackageRelativeDirectory>.</PackageRelativeDirectory>
-    </FilesToPackage>
-    <FilesToPackage Include="..\cng\um\$(IntDir)viorngum.pdb">
       <PackageRelativeDirectory>.</PackageRelativeDirectory>
     </FilesToPackage>
     <FilesToPackage Include="..\test\$(IntDir)viorngtest.exe">

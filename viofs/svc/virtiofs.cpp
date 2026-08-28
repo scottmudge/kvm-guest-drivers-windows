@@ -2492,7 +2492,7 @@ static NTSTATUS SetSecurity(FSP_FILE_SYSTEM *FileSystem,
 {
     VIRTFS *VirtFs = (VIRTFS *)FileSystem->UserContext;
     VIRTFS_FILE_CONTEXT *FileContext = (VIRTFS_FILE_CONTEXT *)FileContext0;
-    PSECURITY_DESCRIPTOR FileSecurity, NewSecurityDescriptor;
+    PSECURITY_DESCRIPTOR FileSecurity = NULL, NewSecurityDescriptor = NULL;
     UINT32 Uid, Gid, Mode, NewMode;
     NTSTATUS Status;
 
@@ -2501,7 +2501,7 @@ static NTSTATUS SetSecurity(FSP_FILE_SYSTEM *FileSystem,
     Status = GetFileInfoInternal(VirtFs, FileContext, NULL, &FileSecurity);
     if (!NT_SUCCESS(Status))
     {
-        SafeHeapFree(FileSecurity);
+        if (FileSecurity) SafeHeapFree(FileSecurity);
         return Status;
     }
 
@@ -2509,7 +2509,7 @@ static NTSTATUS SetSecurity(FSP_FILE_SYSTEM *FileSystem,
 
     if (!NT_SUCCESS(Status))
     {
-        SafeHeapFree(FileSecurity);
+        if (FileSecurity) SafeHeapFree(FileSecurity);
         return Status;
     }
 
@@ -2520,11 +2520,11 @@ static NTSTATUS SetSecurity(FSP_FILE_SYSTEM *FileSystem,
 
     if (!NT_SUCCESS(Status))
     {
-        SafeHeapFree(FileSecurity);
+        if (FileSecurity) SafeHeapFree(FileSecurity);
         return Status;
     }
 
-    SafeHeapFree(FileSecurity);
+    if (FileSecurity) SafeHeapFree(FileSecurity);
 
     Status = FspPosixMapSecurityDescriptorToPermissions(NewSecurityDescriptor, &Uid, &Gid, &NewMode);
 

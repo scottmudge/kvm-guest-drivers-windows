@@ -130,7 +130,6 @@ Related features:
   <!-- @(PackOne_Files) -->
   <ItemGroup>
     <PackOne_Files Include="$(PackOne_SourcePath)\$(PackOne_FileName).sys"/>
-    <PackOne_Files Include="$(PackOne_SourcePath)\$(PackOne_FileName).pdb"/>
     <PackOne_Files Include="$(PackOne_SourcePath)\$(PackOne_FileName).inf"/>
     <PackOne_Files Condition="'$(PackOne_CopyWdf)'!='false'" Include="$(PackOne_WdfCoinstaller)"/>
   </ItemGroup>

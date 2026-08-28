@@ -116,22 +116,13 @@
     <LibFiles Include="..\lib\$(PlatformTarget)\$(ConfigurationName)\viosocklib.dll">
       <OutLib>viosocklib.dll</OutLib>
     </LibFiles>
-    <LibFiles Include="..\lib\$(PlatformTarget)\$(ConfigurationName)\viosocklib.pdb">
-      <OutLib>viosocklib.pdb</OutLib>
-    </LibFiles>
   </ItemGroup>
   <ItemGroup Condition="'$(Platform)'=='x64'">
     <LibFiles Include="..\lib\x64\$(ConfigurationName)\viosocklib.dll">
       <OutLib>viosocklib_x64.dll</OutLib>
     </LibFiles>
-    <LibFiles Include="..\lib\x64\$(ConfigurationName)\viosocklib.pdb">
-      <OutLib>viosocklib_x64.pdb</OutLib>
-    </LibFiles>
     <LibFiles Include="..\lib\x86\$(ConfigurationName)\viosocklib.dll">
       <OutLib>viosocklib_x86.dll</OutLib>
-    </LibFiles>
-    <LibFiles Include="..\lib\x86\$(ConfigurationName)\viosocklib.pdb">
-      <OutLib>viosocklib_x86.pdb</OutLib>
     </LibFiles>
   </ItemGroup>
   <Target Name="CopyLibFiles" BeforeTargets="InfVerif">

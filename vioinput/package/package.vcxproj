@@ -102,12 +102,6 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ItemGroup>
-    <FilesToPackage Include="..\sys\$(IntDir)vioinput.pdb">
-      <PackageRelativeDirectory>.</PackageRelativeDirectory>
-    </FilesToPackage>
-    <FilesToPackage Include="..\hidpassthrough\$(IntDir)viohidkmdf.pdb">
-      <PackageRelativeDirectory>.</PackageRelativeDirectory>
-    </FilesToPackage>
   </ItemGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
